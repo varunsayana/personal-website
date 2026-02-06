@@ -5,43 +5,66 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Coming Soon — Varun Sayana</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
 
-  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body { font-family: Inter, system-ui, sans-serif; }
+  </style>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
-  <div class="bg" aria-hidden="true">
-    <div class="bg__glow"></div>
-    <div class="bg__noise"></div>
-    <div class="bg__vignette"></div>
+
+<body class="min-h-screen bg-black overflow-hidden text-white">
+
+  <!-- High-end gradient background -->
+  <div class="fixed inset-0 -z-10">
+    <div class="absolute -top-1/2 -right-1/3 w-[900px] h-[900px] rounded-full 
+                bg-gradient-to-tr from-blue-600/40 via-indigo-500/30 to-transparent blur-[120px] animate-pulse"></div>
+
+    <div class="absolute -bottom-1/2 -left-1/3 w-[900px] h-[900px] rounded-full 
+                bg-gradient-to-tr from-cyan-500/30 via-blue-500/20 to-transparent blur-[120px]"></div>
+
+    <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-black to-black"></div>
   </div>
 
-  <header class="topbar">
-    <div class="brand">
-      <span class="brand__name">Varun Sayana</span>
-    </div>
-  </header>
+  <!-- Name -->
+  <div class="absolute top-6 left-6">
+    <span class="text-xs tracking-[0.25em] uppercase text-white/80">
+      Varun Sayana
+    </span>
+  </div>
 
-  <main class="shell">
-    <section class="content" aria-label="Coming soon">
-      <h1 class="headline">Coming soon.</h1>
-      <p class="subhead">This portfolio is under construction.</p>
+  <!-- Content -->
+  <main class="min-h-screen flex items-center px-8">
+    <div class="max-w-xl animate-[fade_1s_ease_forwards]">
 
-      <div class="meta" aria-hidden="true">
-        <span class="meta__dot"></span>
-        <span class="meta__text">Launching soon</span>
+      <h1 class="text-[clamp(3rem,6vw,5rem)] font-semibold tracking-tight leading-tight">
+        Coming soon.
+      </h1>
+
+      <p class="mt-6 text-white/70 text-lg max-w-md">
+        This portfolio is under construction.
+      </p>
+
+      <div class="mt-10 inline-flex items-center gap-3 px-4 py-2 rounded-full 
+                  border border-white/15 backdrop-blur-md bg-white/5">
+        <span class="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
+        <span class="text-xs tracking-widest uppercase text-white/70">
+          Launching soon
+        </span>
       </div>
-    </section>
 
-    <aside class="visual" aria-hidden="true">
-      <div class="visual__ring visual__ring--a"></div>
-      <div class="visual__ring visual__ring--b"></div>
-      <div class="visual__ring visual__ring--c"></div>
-    </aside>
+    </div>
   </main>
 
-  <script src="script.js"></script>
+  <style>
+    @keyframes fade {
+      from { opacity:0; transform: translateY(14px); }
+      to { opacity:1; transform: translateY(0); }
+    }
+  </style>
+
 </body>
 </html>
