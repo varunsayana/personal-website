@@ -1,20 +1,25 @@
-import DarkVeil from "@/components/DarkVeil";
+import HeroText from "@/components/home/herotext";
+import DarkVeil from "@/components/home/DarkVeil";
+
 
 
 export default function Home() {
   return (
-    <div>
-      <div style={{ display: 'fit', justifyContent: 'center', alignItems: 'center', height: '90vh' }}>
-        <DarkVeil
-          hueShift={25}
-          noiseIntensity={0}
-          scanlineIntensity={0}
-          speed={1}
-          scanlineFrequency={28}
-          warpAmount={1}
-          resolutionScale={1.25}
-        />
+    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', width: '100vw' }}>
+
+      <div style={{ position: 'absolute', height: '100vh', width: '100vw' }}>
+
+        <DarkVeil hueShift={25} noiseIntensity={0} scanlineIntensity={0} speed={1} scanlineFrequency={0} warpAmount={1} resolutionScale={1} />
+
       </div>
+
+      <div style={{ position: 'relative' }}>
+
+        <HeroText />
+
+      </div>
+
     </div>
+
   );
 }
