@@ -18,7 +18,7 @@ export default function HeroText() {
         <div>
             <div style={herotitle}>
 
-                <h1>Hey I'm Varun👋</h1>
+                <h1>Hey, I'm Varun👋</h1>
 
             </div>
 
